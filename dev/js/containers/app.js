@@ -29,7 +29,7 @@ class App extends Component {
                           onShowUserDetails={(user) => this.handleShowUserDetails(user)}/>
                 <hr/>
                 <h2>User details:</h2>
-                <UserDetails user={this.props.user} />
+                <UserDetails user={this.props.activeUser} />
             </div>
         )
     }
@@ -37,8 +37,8 @@ class App extends Component {
 
 function mapStateToProps(state) {
     return {
-        users: state.userReducer.userList,
-        user: state.userReducer.activeUser
+        users: state.userReducer.users,
+        activeUser: state.userReducer.activeUser
     }
 }
 

@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
 
 const userReducer = combineReducers({
-    userList,
+    users,
     activeUser
 })
 
-function userList() {
+function users() {
     return [
         {
             id: 1,
